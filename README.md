@@ -3,14 +3,14 @@
 </p>
 
 # Create and deploy image
-This article contains the instructions on how to prepare the container image file and your IT infrastructure, and then deploy this image to Kubernetes.
+This article contains the instructions on how to prepare the container image file and your IT infrastructure, and then deploy this image to Kubernetes. In this scenario, we assume working with the **ExampleApp** that listens to the **8800** port. 
 <details open>
 <summary>What is Kubernetes?</summary>
 <br>
 Kubernetes is an open-source container-orchestration tool designed by Google. It allows running your applications across on-site deployments and public clouds, and supports hybrid scenarios. Read the following Google documentation article to learn more about Kubernetes: https://cloud.google.com/learn/what-is-kubernetes.
 </details>
 
-##Install Docker
+## 1. Install Docker
 Install Docker Desctop, depending on your OS:
 **For Windows:**
 1. Make sure you meet the [installation requirements](https://docs.docker.com/desktop/install/windows-install/#system-requirements).
@@ -24,7 +24,7 @@ Install Docker Desctop, depending on your OS:
  - [Ubunty](https://docs.docker.com/desktop/install/ubuntu/)
  - [Arch](https://docs.docker.com/desktop/install/archlinux/)
 
-## Create catalogues
+## 2. Create catalogues
 Create the directories where the application code, Docker resources and the Dockerfile will be located. You can keep all reources in the root directory, however, the example shows the structure with a dedicated subdir for each resource:
 ```
 mkdir quickstart_docker
@@ -42,4 +42,27 @@ the ```/docker``` directory contains Docker resources;
 
 and the ```/docker/application```is a directory for the Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. Read the [Docker Docs article](https://docs.docker.com/engine/reference/builder/) to learn more about Dockerfile.
 
-## Prepare application
+## 3. Prepare application
+
+## 4. Prepare Dockerfile
+Docker can build images automatically by reading the instructions from a Dockerfile. 
+To prepare your Dockerfile, do the following:
+1. Create the Dockerfile for the **ExampleApp** in the ```/docker/application``` directory you created on the step 2. 
+2. Edit the file as follows:
+
+```
+# Use base image from the registry
+FROM python:3.5
+
+# Set the working directory to /app
+WORKDIR /app
+
+# Copy the 'application' directory contents into the container at /app
+COPY ./application /app
+
+# Make port 8000 available to the world outside this container
+EXPOSE 8000
+
+# Execute 'python /app/application.py' when container launches
+CMD ["python", "/app/application.py"]
+```
