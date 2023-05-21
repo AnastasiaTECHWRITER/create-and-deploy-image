@@ -24,6 +24,22 @@ Install Docker Desctop, depending on your OS:
  - [Ubunty](https://docs.docker.com/desktop/install/ubuntu/)
  - [Arch](https://docs.docker.com/desktop/install/archlinux/)
 
-## Create cataglogues
-Create the directories where the application code, Docker resources and the Dockerfile will be located. You can keep all reources in the root folder, however, the example shows the structure with a dedicated directory for each resource:
+## Create catalogues
+Create the directories where the application code, Docker resources and the Dockerfile will be located. You can keep all reources in the root directory, however, the example shows the structure with a dedicated subdir for each resource:
+```
+mkdir quickstart_docker
+mkdir quickstart_docker/application
+mkdir quickstart_docker/docker
+mkdir quickstart_docker/docker/application
+```
+where:
 
+the ```quickstart_docker/``` is the root project directory;
+
+the ```/application``` directory contains application code;
+
+the ```/docker``` directory contains Docker resources;
+
+and the ```/docker/application```is a directory for the Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. Read the [Docker Docs article](https://docs.docker.com/engine/reference/builder/) to learn more about Dockerfile.
+
+## Prepare application
