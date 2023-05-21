@@ -43,6 +43,21 @@ the ```/docker``` directory contains Docker resources;
 and the ```/docker/application```is a directory for the Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. Read the [Docker Docs article](https://docs.docker.com/engine/reference/builder/) to learn more about Dockerfile.
 
 ## 3. Prepare application
+Copy the application.py to the ```/application``` directory you created on the step 2.
+From **application.py**, run a http server:
+```
+import http.server
+import socketserver
+
+PORT = 8000
+
+Handler = http.server.SimpleHTTPRequestHandler
+
+httpd = socketserver.TCPServer(("", PORT), Handler)
+
+print("serving at port", PORT)
+httpd.serve_forever()
+```
 
 ## 4. Prepare Dockerfile
 Docker can build images automatically by reading the instructions from a Dockerfile. 
@@ -66,3 +81,6 @@ EXPOSE 8000
 # Execute 'python /app/application.py' when container launches
 CMD ["python", "/app/application.py"]
 ```
+3. Save your edits.
+
+## 5. Build new container image
