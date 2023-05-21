@@ -7,5 +7,15 @@ This article contains the instructions on how to prepare the container image fil
 <details open>
 <summary>What is Kubernetes?</summary>
 <br>
-Kubernetes is an open-source container-orchestration tool designed by Google. 
+Kubernetes is an open-source container-orchestration tool designed by Google. It allows running your applications across on-site deployments and public clouds, and supports hybrid scenarios. Read the following Google documentation article to learn more about Kubernetes: https://cloud.google.com/learn/what-is-kubernetes.
 </details>
+
+##Install Docker
+Install Docker Desctop, depending on your OS:
+**For Windows:**
+1. Make sure you meet the [installation requirements](https://docs.docker.com/desktop/install/windows-install/#system-requirements).
+2. [Download](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe) Docker Desktop for Windows.
+3. Follow the [installation prompts](https://docs.docker.com/desktop/install/windows-install/#install-docker-desktop-on-windows) (both: interactive and command prompt deployment scenario are supported).
+**For Linux:**
+1. Make sure you meet [installation requirements](https://docs.docker.com/desktop/install/linux-install/#system-requirements).
+2. Download 
