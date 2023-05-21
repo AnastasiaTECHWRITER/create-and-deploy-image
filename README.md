@@ -17,5 +17,13 @@ Install Docker Desctop, depending on your OS:
 2. [Download](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe) Docker Desktop for Windows.
 3. Follow the [installation prompts](https://docs.docker.com/desktop/install/windows-install/#install-docker-desktop-on-windows) (both: interactive and command prompt deployment scenario are supported).
 **For Linux:**
-1. Make sure you meet [installation requirements](https://docs.docker.com/desktop/install/linux-install/#system-requirements).
-2. Download 
+1. Make sure you meet the [installation requirements](https://docs.docker.com/desktop/install/linux-install/#system-requirements).
+2. Download the distributive and follow the installation prompts depending on your Linux distribution:
+ - [Debian](https://docs.docker.com/desktop/install/debian/)
+ - [Fedora](https://docs.docker.com/desktop/install/fedora/)
+ - [Ubunty](https://docs.docker.com/desktop/install/ubuntu/)
+ - [Arch](https://docs.docker.com/desktop/install/archlinux/)
+
+## Create cataglogues
+Create the directories where the application code, Docker resources and the Dockerfile will be located. You can keep all reources in the root folder, however, the example shows the structure with a dedicated directory for each resource:
+
