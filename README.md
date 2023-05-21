@@ -12,10 +12,12 @@ Kubernetes is an open-source container-orchestration tool designed by Google. It
 
 ## 1. Install Docker
 Install Docker Desctop, depending on your OS:
+
 **For Windows:**
 1. Make sure you meet the [installation requirements](https://docs.docker.com/desktop/install/windows-install/#system-requirements).
 2. [Download](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe) Docker Desktop for Windows.
 3. Follow the [installation prompts](https://docs.docker.com/desktop/install/windows-install/#install-docker-desktop-on-windows) (both: interactive and command prompt deployment scenario are supported).
+
 **For Linux:**
 1. Make sure you meet the [installation requirements](https://docs.docker.com/desktop/install/linux-install/#system-requirements).
 2. Download the distributive and follow the installation prompts depending on your Linux distribution:
@@ -40,11 +42,11 @@ the ```/application``` directory contains application code;
 
 the ```/docker``` directory contains Docker resources;
 
-and the ```/docker/application```is a directory for the Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. Read the [Docker Docs article](https://docs.docker.com/engine/reference/builder/) to learn more about Dockerfile.
+and the ```/docker/application```is a directory for the Dockerfile. A **Dockerfile** is a text document that contains all the commands a user could call on the command line to assemble an image. Read the [Docker Docs article](https://docs.docker.com/engine/reference/builder/) to learn more about Dockerfile.
 
 ## 3. Prepare application
-Copy the application.py to the ```/application``` directory you created on the step 2.
-From **application.py**, run a http server:
+1. Copy the application.py to the ```/application``` directory you created on the step 2.
+2. From **application.py**, run a http server:
 ```
 import http.server
 import socketserver
@@ -99,7 +101,7 @@ Read the [Docker Docs article](https://docs.docker.com/engine/reference/builder/
 
 ## 6. Review images list
 Finally, review the list of the available images and identify your container file. 
-For that, run the following ccomman in terminal:
+For that, run the following command in terminal:
 ```$ docker images```
 The default docker images will show all top level images, their repository and tags, and their size:
 | REPOSITORY| TAG | IMAGE ID | CREATED | SIZE |
