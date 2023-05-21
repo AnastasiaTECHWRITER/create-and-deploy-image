@@ -84,3 +84,27 @@ CMD ["python", "/app/application.py"]
 3. Save your edits.
 
 ## 5. Build new container image
+In terminal, run the following command:
+```
+docker build . -f-docker/application/Dockerfile -t exampleapp
+```
+where
+``` -``` is a working directory, build context. 
+
+```-f docker/application/Dockerfile``` is the Dockerfile;
+
+```-t exampleapp``` - applies a tag to the container image which identifies your image version.
+
+Read the [Docker Docs article](https://docs.docker.com/engine/reference/builder/) to learn more about image assembling.
+
+## 6. Review images list
+Finally, review the list of the available images and identify your container file. 
+For that, run the following ccomman in terminal:
+```$ docker images```
+The default docker images will show all top level images, their repository and tags, and their size:
+| REPOSITORY| TAG | IMAGE ID | CREATED | SIZE |
+|--|--|--|--|--|
+| exampleapp |  |  |  |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
+
