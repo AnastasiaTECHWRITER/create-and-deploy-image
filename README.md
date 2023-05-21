@@ -4,10 +4,10 @@
 
 # Create and deploy image
 This article contains the instructions on how to prepare the container image file and your IT infrastructure, and then deploy this image to Kubernetes. In this scenario, we assume working with the **ExampleApp** that listens to the **8800** port. 
-<details open>
+<details>
 <summary>What is Kubernetes?</summary>
 <br>
-Kubernetes is an open-source container-orchestration tool designed by Google. It allows running your applications across on-site deployments and public clouds, and supports hybrid scenarios. Read the following Google documentation article to learn more about Kubernetes: https://cloud.google.com/learn/what-is-kubernetes.
+Kubernetes is an open-source container-orchestration tool designed by Google. It allows running your applications across on-site deployments and public clouds, and supports hybrid scenarios. Read the following Google documentation article to learn more about Kubernetes: <p><a href="https://cloud.google.com/learn/what-is-kubernetes">What is Kubernetes?</a></p> .
 </details>
 
 ## 1. Install Docker
@@ -104,7 +104,7 @@ For that, run the following ccomman in terminal:
 The default docker images will show all top level images, their repository and tags, and their size:
 | REPOSITORY| TAG | IMAGE ID | CREATED | SIZE |
 |--|--|--|--|--|
-| exampleapp |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
+| exampleapp | latest | 83wse0edc28a | 2 seconds ago | 153MB |
+| python | 3.6 | 05sob8636w3f | 6 weeks ago| 153MB |
 
+**Now you can pull the inage to the repository.**
